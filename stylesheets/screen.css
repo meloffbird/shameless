@@ -67,8 +67,365 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 11, ../sass/screen.sass */
+/*
+  Simple Grid
+  Project Page - http://thisisdallas.github.com/Simple-Grid/
+  Author - Dallas Bass
+  Site - http://ninenineteen.co
+*/
+/* line 8, ../sass/_grid.scss */
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 14, ../sass/_grid.scss */
+body {
+  margin: 0;
+}
+
+/* line 18, ../sass/_grid.scss */
+[class*='col-'] {
+  float: left;
+  min-height: 1px;
+  padding-right: 20px;
+  /* column-space */
+}
+
+/* line 24, ../sass/_grid.scss */
+.grid {
+  width: 100%;
+  max-width: 1140px;
+  min-width: 748px;
+  /* when using padded grid on ipad in portrait mode, width should be viewport-width - padding = (768 - 20) = 748. actually, it should be even smaller to allow for padding of grid containing element */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* line 32, ../sass/_grid.scss */
+.grid:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 38, ../sass/_grid.scss */
+.grid-pad {
+  padding-top: 20px;
+  padding-left: 20px;
+  /* grid-space to left */
+  padding-right: 0;
+  /* grid-space to right: (grid-space-left - column-space) e.g. 20px-20px=0 */
+}
+
+/* line 44, ../sass/_grid.scss */
+.push-right {
+  float: right;
+}
+
+/* Content Columns */
+/* line 50, ../sass/_grid.scss */
+.col-1-1 {
+  width: 100%;
+}
+
+/* line 53, ../sass/_grid.scss */
+.col-2-3, .col-8-12 {
+  width: 66.66%;
+}
+
+/* line 57, ../sass/_grid.scss */
+.col-1-2, .col-6-12 {
+  width: 50%;
+}
+
+/* line 61, ../sass/_grid.scss */
+.col-1-3, .col-4-12 {
+  width: 33.33%;
+}
+
+/* line 65, ../sass/_grid.scss */
+.col-1-4, .col-3-12 {
+  width: 25%;
+}
+
+/* line 69, ../sass/_grid.scss */
+.col-1-5 {
+  width: 20%;
+}
+
+/* line 73, ../sass/_grid.scss */
+.col-1-6, .col-2-12 {
+  width: 16.667%;
+}
+
+/* line 77, ../sass/_grid.scss */
+.col-1-7 {
+  width: 14.28%;
+}
+
+/* line 81, ../sass/_grid.scss */
+.col-1-8 {
+  width: 12.5%;
+}
+
+/* line 85, ../sass/_grid.scss */
+.col-1-9 {
+  width: 11.1%;
+}
+
+/* line 89, ../sass/_grid.scss */
+.col-1-10 {
+  width: 10%;
+}
+
+/* line 93, ../sass/_grid.scss */
+.col-1-11 {
+  width: 9.09%;
+}
+
+/* line 97, ../sass/_grid.scss */
+.col-1-12 {
+  width: 8.33%;
+}
+
+/* Layout Columns */
+/* line 103, ../sass/_grid.scss */
+.col-11-12 {
+  width: 91.66%;
+}
+
+/* line 107, ../sass/_grid.scss */
+.col-10-12 {
+  width: 83.333%;
+}
+
+/* line 111, ../sass/_grid.scss */
+.col-9-12 {
+  width: 75%;
+}
+
+/* line 115, ../sass/_grid.scss */
+.col-5-12 {
+  width: 41.66%;
+}
+
+/* line 119, ../sass/_grid.scss */
+.col-7-12 {
+  width: 58.33%;
+}
+
+/* Pushing blocks */
+/* line 125, ../sass/_grid.scss */
+.push-2-3, .push-8-12 {
+  margin-left: 66.66%;
+}
+
+/* line 129, ../sass/_grid.scss */
+.push-1-2, .push-6-12 {
+  margin-left: 50%;
+}
+
+/* line 133, ../sass/_grid.scss */
+.push-1-3, .push-4-12 {
+  margin-left: 33.33%;
+}
+
+/* line 137, ../sass/_grid.scss */
+.push-1-4, .push-3-12 {
+  margin-left: 25%;
+}
+
+/* line 141, ../sass/_grid.scss */
+.push-1-5 {
+  margin-left: 20%;
+}
+
+/* line 145, ../sass/_grid.scss */
+.push-1-6, .push-2-12 {
+  margin-left: 16.667%;
+}
+
+/* line 149, ../sass/_grid.scss */
+.push-1-7 {
+  margin-left: 14.28%;
+}
+
+/* line 153, ../sass/_grid.scss */
+.push-1-8 {
+  margin-left: 12.5%;
+}
+
+/* line 157, ../sass/_grid.scss */
+.push-1-9 {
+  margin-left: 11.1%;
+}
+
+/* line 161, ../sass/_grid.scss */
+.push-1-10 {
+  margin-left: 10%;
+}
+
+/* line 165, ../sass/_grid.scss */
+.push-1-11 {
+  margin-left: 9.09%;
+}
+
+/* line 169, ../sass/_grid.scss */
+.push-1-12 {
+  margin-left: 8.33%;
+}
+
+@media handheld, only screen and (max-width: 767px) {
+  /* line 174, ../sass/_grid.scss */
+  .grid {
+    width: 100%;
+    min-width: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 20px;
+    /* grid-space to left */
+    padding-right: 10px;
+    /* grid-space to right: (grid-space-left - column-space) e.g. 20px-10px=10px */
+  }
+
+  /* line 183, ../sass/_grid.scss */
+  [class*='col-'] {
+    width: auto;
+    float: none;
+    margin: 10px 0;
+    padding-left: 0;
+    padding-right: 10px;
+    /* column-space */
+  }
+
+  /* Mobile Layout */
+  /* line 193, ../sass/_grid.scss */
+  [class*='mobile-col-'] {
+    float: left;
+    margin: 0 0 10px;
+    padding-left: 0;
+    padding-right: 10px;
+    /* column-space */
+    padding-bottom: 0;
+  }
+
+  /* line 201, ../sass/_grid.scss */
+  .mobile-col-1-1 {
+    width: 100%;
+  }
+
+  /* line 204, ../sass/_grid.scss */
+  .mobile-col-2-3, .mobile-col-8-12 {
+    width: 66.66%;
+  }
+
+  /* line 208, ../sass/_grid.scss */
+  .mobile-col-1-2, .mobile-col-6-12 {
+    width: 50%;
+  }
+
+  /* line 212, ../sass/_grid.scss */
+  .mobile-col-1-3, .mobile-col-4-12 {
+    width: 33.33%;
+  }
+
+  /* line 216, ../sass/_grid.scss */
+  .mobile-col-1-4, .mobile-col-3-12 {
+    width: 25%;
+  }
+
+  /* line 220, ../sass/_grid.scss */
+  .mobile-col-1-5 {
+    width: 20%;
+  }
+
+  /* line 224, ../sass/_grid.scss */
+  .mobile-col-1-6, .mobile-col-2-12 {
+    width: 16.667%;
+  }
+
+  /* line 228, ../sass/_grid.scss */
+  .mobile-col-1-7 {
+    width: 14.28%;
+  }
+
+  /* line 232, ../sass/_grid.scss */
+  .mobile-col-1-8 {
+    width: 12.5%;
+  }
+
+  /* line 236, ../sass/_grid.scss */
+  .mobile-col-1-9 {
+    width: 11.1%;
+  }
+
+  /* line 240, ../sass/_grid.scss */
+  .mobile-col-1-10 {
+    width: 10%;
+  }
+
+  /* line 244, ../sass/_grid.scss */
+  .mobile-col-1-11 {
+    width: 9.09%;
+  }
+
+  /* line 248, ../sass/_grid.scss */
+  .mobile-col-1-12 {
+    width: 8.33%;
+  }
+
+  /* Layout Columns */
+  /* line 254, ../sass/_grid.scss */
+  .mobile-col-11-12 {
+    width: 91.66%;
+  }
+
+  /* line 258, ../sass/_grid.scss */
+  .mobile-col-10-12 {
+    width: 83.333%;
+  }
+
+  /* line 262, ../sass/_grid.scss */
+  .mobile-col-9-12 {
+    width: 75%;
+  }
+
+  /* line 266, ../sass/_grid.scss */
+  .mobile-col-5-12 {
+    width: 41.66%;
+  }
+
+  /* line 270, ../sass/_grid.scss */
+  .mobile-col-7-12 {
+    width: 58.33%;
+  }
+
+  /* line 274, ../sass/_grid.scss */
+  .hide-on-mobile {
+    display: none !important;
+    width: 0;
+    height: 0;
+  }
+}
+/* line 13, ../sass/screen.sass */
 p {
   font-size: 50px;
-  color: salmon;
+  color: blanchedalmond;
+}
+
+/* line 18, ../sass/screen.sass */
+.color1 {
+  background: crimson;
+}
+
+/* line 22, ../sass/screen.sass */
+.color2 {
+  background: indigo;
+}
+
+/* line 26, ../sass/screen.sass */
+.color3 {
+  background: teal;
 }
