@@ -1,6 +1,6 @@
 /* Adapted from Jake Archibald's "Animated Line Drawing in SVG"
- * http://jakearchibald.com/2013/animated-line-drawing-svg/
- */
+* http://jakearchibald.com/2013/animated-line-drawing-svg/
+*/
 
 var path = document.querySelector('.owl path');
 var length = path.getTotalLength();
@@ -14,7 +14,7 @@ path.style.strokeDashoffset = length;
 path.getBoundingClientRect();
 // Define our transition
 path.style.transition = path.style.WebkitTransition =
-    'stroke-dashoffset 11s ease-in-out';
+    'stroke-dashoffset 20s ease-in-out';
 // Go!
 path.style.strokeDashoffset = '0';
 
@@ -23,7 +23,7 @@ path.style.strokeDashoffset = '0';
 
 
 
-/* Check answer to questions */
+/* Check answer to questions
 
   // DEFAULT SETTINGS
   $('#wrong').hide();
@@ -53,5 +53,11 @@ path.style.strokeDashoffset = '0';
       }
 
   });
+
+*/
+
+
+
+
 
 
