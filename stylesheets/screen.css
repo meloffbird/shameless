@@ -434,3 +434,8 @@ p {
 .hidden {
   display: none;
 }
+
+/* line 34, ../sass/screen.sass */
+#sketch {
+  width: 350px;
+}
