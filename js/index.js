@@ -30,7 +30,10 @@ $(document).ready(function() {
 	function guessAnswer() {
 	  $("button.guess-submit").click(function(event) {
 
-	    if ( $('#guess-input').val() == answer) {
+	  	var guess = $('#guess-input').val();
+	  	guess = guess.toLowerCase();
+
+	  	if ( guess == answer) {
 	      $('#correct').show();
 	      $('#wrong').hide();
 
@@ -44,8 +47,9 @@ $(document).ready(function() {
 			$demo.lazylinepainter(options);
 			$demo.lazylinepainter('paint');
 
-	    } else {
-	      $('#wrong').show();
+		} else {
+			 $('#wrong').show().fadeOut(1000);
+			$('#guess-input').val('');
 	    }
 
 	  });
