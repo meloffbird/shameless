@@ -6,10 +6,12 @@
 
 @import compass/reset
 @import grid
+@import variables
 @import base
 
 
 
+/* testing */
 p
 	font-size: 20px
 	color: blanchedalmond
@@ -32,4 +34,71 @@ p
 
 
 #sketch
-	width: 350px
+	width: 300px
+	margin: 0 auto
+
+
+/* Input field */
+input
+	display: block
+	margin: 0.3em 0 0 0
+	padding: 0.5em .5em 0.5em 0.7em
+	/* width: calc(100% - 2em) */
+	border: none
+	background: transparent
+	color: rgba(0,0,0,0.8)
+	font-size: 2em
+	letter-spacing: .3em
+	text-transform: uppercase
+
+input:focus
+	outline: none
+
+
+/* Navigation */
+
+// ul.nav
+// 	display: flex
+
+// 	li
+// 		display: block
+// 		font-size: 2em
+// 		background: mistyrose
+// 		width: 100%
+// 		height: 10%
+// 		text-align: center
+// 		padding-top: 20px
+
+// 		a
+// 			text-decoration: none
+
+
+.nav-wrapper
+	display: inline-block
+
+	.nav-box
+		width: 16vw
+		height: 12vw
+		background: mistyrose
+		margin-right: 2px
+		float: left
+		font-size: 2em
+		text-align: center
+		display: table
+
+
+		a
+			text-decoration: none
+			display: table-cell
+			vertical-align: middle
+			text-align: center
+
+
+
+
+
+
+
+@import queries
+
+

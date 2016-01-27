@@ -409,33 +409,122 @@ body {
     height: 0;
   }
 }
-/* line 13, ../sass/screen.sass */
+/* Typograpy */
+/* line 3, ../sass/_base.sass */
+body {
+  font-family: "Karla";
+}
+
+/* testing */
+/* line 15, ../sass/screen.sass */
 p {
   font-size: 20px;
   color: blanchedalmond;
 }
 
-/* line 18, ../sass/screen.sass */
+/* line 20, ../sass/screen.sass */
 .color1 {
   background: crimson;
 }
 
-/* line 22, ../sass/screen.sass */
+/* line 24, ../sass/screen.sass */
 .color2 {
   background: indigo;
 }
 
-/* line 26, ../sass/screen.sass */
+/* line 28, ../sass/screen.sass */
 .color3 {
   background: teal;
 }
 
-/* line 30, ../sass/screen.sass */
+/* line 32, ../sass/screen.sass */
 .hidden {
   display: none;
 }
 
-/* line 34, ../sass/screen.sass */
+/* line 36, ../sass/screen.sass */
 #sketch {
-  width: 350px;
+  width: 300px;
+  margin: 0 auto;
+}
+
+/* Input field */
+/* line 42, ../sass/screen.sass */
+input {
+  display: block;
+  margin: 0.3em 0 0 0;
+  padding: 0.5em 0.5em 0.5em 0.7em;
+  /* width: calc(100% - 2em) */
+  border: none;
+  background: transparent;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 2em;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+/* line 54, ../sass/screen.sass */
+input:focus {
+  outline: none;
+}
+
+/* Navigation */
+/* line 76, ../sass/screen.sass */
+.nav-wrapper {
+  display: inline-block;
+}
+/* line 79, ../sass/screen.sass */
+.nav-wrapper .nav-box {
+  width: 16vw;
+  height: 12vw;
+  background: mistyrose;
+  margin-right: 2px;
+  float: left;
+  font-size: 2em;
+  text-align: center;
+  display: table;
+}
+/* line 90, ../sass/screen.sass */
+.nav-wrapper .nav-box a {
+  text-decoration: none;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/*---------------------------------------------- */
+/* Custom, iPhone Retina */
+/*------------------------------------------------ */
+/*---------------------------------------------- */
+/* Extra Small Devices, Phones */
+/*------------------------------------------------ */
+/*---------------------------------------------- */
+/* Small Devices, Tablets */
+/*------------------------------------------------ */
+@media only screen and (min-width: 767px) {
+  /* line 21, ../sass/_queries.sass */
+  .nav-wrapper .nav-box {
+    width: 15vw;
+    height: 15vw;
+  }
+}
+/*---------------------------------------------- */
+/* Medium Devices, Desktops */
+/*------------------------------------------------ */
+@media only screen and (min-width: 992px) {
+  /* line 33, ../sass/_queries.sass */
+  .nav-wrapper .nav-box {
+    width: 12vw;
+    height: 12vw;
+  }
+}
+/*---------------------------------------------- */
+/* Large Devices, Wide Screens */
+/*------------------------------------------------ */
+@media only screen and (min-width: 1200px) {
+  /* line 44, ../sass/_queries.sass */
+  .nav-wrapper .nav-box {
+    width: 10vw;
+    height: 10vw;
+  }
 }

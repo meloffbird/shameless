@@ -23,7 +23,6 @@ $(document).ready(function() {
     /**
 	* Guess Check
 	*/
-
 	var answer = document.getElementById('guess-input').name;
 	var hint = document.getElementById('guess-input').value;
 
