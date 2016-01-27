@@ -20,24 +20,6 @@ $(document).ready(function() {
 	$demo.lazylinepainter(options);
 	$demo.lazylinepainter('paint');
 
-	function onClick() {
-
-		$demo.lazylinepainter('destroy');
-
-		options.speedMultiplier = 1;
-		options.delay = 0;
-		options.ease = 'easeInOutQuad';
-
-
-		$demo.lazylinepainter(options);
-		$demo.lazylinepainter('paint');
-
-	 }
-
-	 $(window).on('click', onClick);
-
-
-
     /**
 	* Guess Check
 	*/
@@ -51,6 +33,17 @@ $(document).ready(function() {
 	    if ( $('#guess-input').val() == answer) {
 	      $('#correct').show();
 	      $('#wrong').hide();
+
+			$demo.lazylinepainter('destroy');
+
+			options.speedMultiplier = 1;
+			options.delay = 0;
+			options.ease = 'easeInOutQuad';
+
+
+			$demo.lazylinepainter(options);
+			$demo.lazylinepainter('paint');
+
 	    } else {
 	      $('#wrong').show();
 	    }
