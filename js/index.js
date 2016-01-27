@@ -1,17 +1,48 @@
 
 $(document).ready(function() {
 
+	/**
+	* LazyLine Painter
+	*/
+
+	var $demo = $('#sketch');
+
+	var state = 'paint';
+	var options = {
+		'svgData' : svgData,
+		'strokeWidth':2,
+		'strokeColor': '#b5287b',
+		'ease': 'easeInOutQuad',
+		'delay': 5,
+		'speedMultiplier': 5
+		}
+
+	$demo.lazylinepainter(options);
+	$demo.lazylinepainter('paint');
+
+	function onClick() {
+
+		$demo.lazylinepainter('destroy');
+
+		options.speedMultiplier = 1;
+		options.delay = 0;
+		options.ease = 'easeInOutQuad';
+
+
+		$demo.lazylinepainter(options);
+		$demo.lazylinepainter('paint');
+
+	 }
+
+	 $(window).on('click', onClick);
+
+
+
     /**
 	* Guess Check
 	*/
 
-	// hide messages
-	$('#wrong').hide();
-	$('#correct').hide();
-
-
 	var answer = document.getElementById('guess-input').name;
-
 
 	// check answer and hide boxes
 	function guessAnswer() {
@@ -41,28 +72,21 @@ $(document).ready(function() {
 
 	enterSubmit();
 
-	/**
-	* LazyLine Painter
-	*/
-
-	var $logo = $('#sketch');
-
-	      $logo.lazylinepainter({
-	          'svgData': svgData,
-	          'strokeWidth': 1,
-	          'speedMultiplier': 3,
-	          'strokeColor': '#b5287b',
-	              'drawSequential': true,
-	              'ease': 'easeInOutQuad'
-	      });
-
-          setTimeout(function(){
-              $logo.lazylinepainter('paint');
-          }, 10)
-
 
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

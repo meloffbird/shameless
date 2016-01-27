@@ -429,3 +429,8 @@ p {
 .color3 {
   background: teal;
 }
+
+/* line 30, ../sass/screen.sass */
+.hidden {
+  display: none;
+}
