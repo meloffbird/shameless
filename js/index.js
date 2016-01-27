@@ -25,6 +25,7 @@ $(document).ready(function() {
 	*/
 
 	var answer = document.getElementById('guess-input').name;
+	var hint = document.getElementById('guess-input').value;
 
 	// check answer and hide boxes
 	function guessAnswer() {
@@ -48,8 +49,8 @@ $(document).ready(function() {
 			$demo.lazylinepainter('paint');
 
 		} else {
-			 $('#wrong').show().fadeOut(1000);
-			$('#guess-input').val('');
+			$('#wrong').show().fadeOut(1000);
+			$('#guess-input').val(hint);
 	    }
 
 	  });
