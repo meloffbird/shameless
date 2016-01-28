@@ -5,6 +5,7 @@
 	<!--FONTS -->
 	<link href='https://fonts.googleapis.com/css?family=Karla:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700italic' rel='stylesheet' type='text/css'>
 
 	<!-- CSS STYLES -->
 	<link href="../stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -31,7 +32,7 @@
 
 	<div class="grid grid-pad">
 
-		<div class="col-2-12 test">
+		<div class="col-2-12">
 			<div class="content">
 
 				<div class="nav-wrapper">
@@ -54,7 +55,7 @@
 			</div>
 		</div>
 
-		<div class="col-4-12 test">
+		<div class="col-4-12">
 			<div class="content">
 
 
@@ -67,6 +68,8 @@
 
 					<button id="guess-submit" class="guess-submit">Submit</button>
 
+					<p class="enter"> Or press Enter </p>
+
 					<button id ="next" class="hidden"><a href="three.html"> Next </a> </button>
 
 				</div>
@@ -75,19 +78,6 @@
 				<div id="answer" class=" hidden">
 					<p> I have a huge love for my extended <strong>Brazilian </strong> family and visit as often as I can. I have struggled to learn the language ever since I was little but I do understand the most important words: praia(beach), cerveja (beer) and charrasco (bbq) </p>
 				</div>
-
-				<!-- ---MESSAGES--- -->
-
-				<div id="messages">
-
-				  <div id="correct" class="hidden">
-				    <h5> CORRECT! </h5>
-				  </div>
-
-				  <div id="wrong" class="hidden">
-				    <h5> NOPE! TRY AGAIN </h5>
-				  </div>
-
 
 
 			</div>
@@ -99,6 +89,20 @@
 			<script src="../js/index.js"></script>
 
 	</div> <!--end main grid -->
+
+
+	<!-- ---MESSAGES--- -->
+
+	<div id="messages">
+
+	  <div id="correct" class="alert hidden">
+	    <h5> CORRECT! </h5>
+	  </div>
+
+	  <div id="wrong" class="alert hidden">
+	    <h5> NOPE! TRY AGAIN </h5>
+	  </div>
+
 
 
 </body>

@@ -46,7 +46,7 @@ $(document).ready(function() {
 
 	//display answer
 	function correctShit() {
-		$('#correct').show();
+		$('#correct').show().fadeOut(3000);
 		$('#wrong').hide();
 
 		// destory lazyline
@@ -80,7 +80,6 @@ $(document).ready(function() {
 	  }
 
 	}
-
 
 
 	// so that no one tries to put in spaces

@@ -591,13 +591,18 @@ p.enter {
 /* line 104, ../sass/screen.sass */
 #answer {
   margin-top: 100px;
+  font-family: "Playfair Display";
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.5em;
+  font-size: 20px;
 }
 
 /* Navigation */
 /*---------------------------------------------- */
 /* Alerts */
 /*------------------------------------------------ */
-/* line 130, ../sass/screen.sass */
+/* line 135, ../sass/screen.sass */
 .alert {
   background: blanchedalmond;
   height: 80px;
@@ -612,11 +617,11 @@ p.enter {
 /*---------------------------------------------- */
 /* Navigation */
 /*------------------------------------------------ */
-/* line 145, ../sass/screen.sass */
+/* line 150, ../sass/screen.sass */
 .nav-wrapper {
   display: inline-block;
 }
-/* line 148, ../sass/screen.sass */
+/* line 153, ../sass/screen.sass */
 .nav-wrapper .nav-box {
   width: 16vw;
   height: 12vw;
@@ -627,19 +632,19 @@ p.enter {
   text-align: center;
   display: table;
 }
-/* line 158, ../sass/screen.sass */
+/* line 163, ../sass/screen.sass */
 .nav-wrapper .nav-box.inactive {
   pointer-events: none;
   cursor: default;
   opacity: 0.5;
 }
-/* line 163, ../sass/screen.sass */
+/* line 168, ../sass/screen.sass */
 .nav-wrapper .nav-box.completed {
   pointer-events: none;
   cursor: default;
   opacity: 1;
 }
-/* line 169, ../sass/screen.sass */
+/* line 174, ../sass/screen.sass */
 .nav-wrapper .nav-box a {
   text-decoration: none;
   display: table-cell;
