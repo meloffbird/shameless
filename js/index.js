@@ -5,7 +5,8 @@ $(document).ready(function() {
 	* LazyLine Painter
 	*/
 
-	var $demo = $('#sketch');
+
+	var $demo = $('#sketch'); //make sure this is same as ID
 
 	var state = 'paint';
 	var options = {
@@ -39,11 +40,54 @@ $(document).ready(function() {
 	*/
 	var answer = document.getElementById('guess-input').name;
 	var hint = document.getElementById('guess-input').value;
+	var count = 0;
+	var countButton = document.getElementById("guess-submit");
 
 
+	//display answer
+	function correctShit() {
+		$('#correct').show();
+		$('#wrong').hide();
+
+		// destory lazyline
+		$demo.lazylinepainter('destroy');
+
+		options.speedMultiplier = 1;
+		options.delay = 0;
+		options.ease = 'easeInOutQuad';
+
+		// restart lazyline
+		$demo.lazylinepainter(options);
+		$demo.lazylinepainter('paint');
+
+		// hide submit, and reveal answer
+		$('button.guess-submit').hide();
+		$('#answer').show();
+		$('#next').show();
+		$('#guess-input').val(answer);
+
+	}
+
+	// count number of attempts
+	countButton.onclick = function(){
+	  count++;
+
+	  if (count == 5) {
+	  		$('button.guess-submit').hide();
+			$('#answer').show();
+			$('#next').show();
+			$('#guess-input').val(answer); // show answer in input
+	  }
+
+	}
+
+
+
+	// so that no one tries to put in spaces
 	 $("#guess-input").on("keydown", function (e) {
 		return e.which !== 32;
 	});
+
 
 	// check answer and hide boxes
 	function guessAnswer() {
@@ -53,25 +97,8 @@ $(document).ready(function() {
 	  	guess = guess.toLowerCase();
 
 	  	if ( guess == answer) {
-	      $('#correct').show();
-	      $('#wrong').hide();
 
-	      // destory lazyline
-			$demo.lazylinepainter('destroy');
-
-			options.speedMultiplier = 1;
-			options.delay = 0;
-			options.ease = 'easeInOutQuad';
-
-			// restart lazyline
-			$demo.lazylinepainter(options);
-			$demo.lazylinepainter('paint');
-
-			// hide submit, and reveal answer
-			$('button.guess-submit').hide();
-			$('#answer').show();
-			$('#next').show();
-			$('#guess-input').val(answer);
+	  		correctShit();
 
 		} else {
 			$('#wrong').show().fadeOut(1000);
@@ -81,6 +108,8 @@ $(document).ready(function() {
 	  });
 
 	}
+
+
 
 	//submit on enter
 	function enterSubmit() {
