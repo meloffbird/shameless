@@ -589,7 +589,13 @@ input:focus {
   cursor: default;
   opacity: 0.5;
 }
-/* line 117, ../sass/screen.sass */
+/* line 116, ../sass/screen.sass */
+.nav-wrapper .nav-box.completed {
+  pointer-events: none;
+  cursor: default;
+  opacity: 1;
+}
+/* line 122, ../sass/screen.sass */
 .nav-wrapper .nav-box a {
   text-decoration: none;
   display: table-cell;
