@@ -410,6 +410,102 @@ body {
   }
 }
 /* css from other places */
+/* Button Styles
+/*---------*/
+/* line 4, ../sass/_vendor.scss */
+button, .button, input[type=submit] {
+  outline: none;
+  border: 0;
+  background: #5786c1;
+  color: white;
+  padding: 8px 14px;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  display: inline-block;
+  /* needed for anchors */
+  position: relative;
+  cursor: pointer;
+  box-shadow: 1px 0px #3a587f, 0px 1px #4171ae, 2px 1px #3a587f, 1px 2px #4171ae, 3px 2px #3a587f, 2px 3px #4171ae, 4px 3px #3a587f, 3px 4px #4171ae, 5px 4px #3a587f, 4px 5px #4171ae, 6px 5px #3a587f, 5px 6px #4171ae;
+}
+/* line 22, ../sass/_vendor.scss */
+button:hover, button:focus, button.hover, button.focus, .button:hover, .button:focus, .button.hover, .button.focus, input[type=submit]:hover, input[type=submit]:focus, input[type=submit].hover, input[type=submit].focus {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 0px #3a587f, 0px 1px #4171ae, 2px 1px #3a587f, 1px 2px #4171ae, 3px 2px #3a587f, 2px 3px #4171ae, 4px 3px #3a587f, 3px 4px #4171ae;
+}
+/* line 30, ../sass/_vendor.scss */
+button:active, button.active, .button:active, .button.active, input[type=submit]:active, input[type=submit].active {
+  transform: translate(4px, 4px);
+  box-shadow: 1px 0px #3a587f, 0px 1px #4171ae, 2px 1px #3a587f, 1px 2px #4171ae;
+}
+
+/* line 39, ../sass/_vendor.scss */
+button.start {
+  background: red;
+}
+
+/* Dialog Styels
+/*---------*/
+/* line 47, ../sass/_vendor.scss */
+#dialog-overlay {
+  /* set it to fill the whil screen */
+  width: 100%;
+  height: 100%;
+  /* transparency for different browsers */
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  opacity: 0.5;
+  background: #000;
+  /* make sure it appear behind the dialog box but above everything else */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3000;
+  /* hide it by default */
+  display: none;
+}
+
+/* line 70, ../sass/_vendor.scss */
+#dialog-box {
+  /* css3 drop shadow */
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  background: #eee;
+  /* styling of the dialog box, i have a fixed dimension for this demo */
+  width: 328px;
+  /* make sure it has the highest z-index */
+  position: absolute;
+  z-index: 5000;
+  /* hide it by default */
+  display: none;
+}
+
+/* line 88, ../sass/_vendor.scss */
+#dialog-box .dialog-content {
+  /* style the content */
+  text-align: left;
+  padding: 10px;
+  margin: 13px;
+  color: #666;
+  font-family: arial;
+  font-size: 11px;
+}
+
+/* extra styling */
+/* line 100, ../sass/_vendor.scss */
+#dialog-box .dialog-content p {
+  font-weight: 700;
+  margin: 0;
+}
+
+/* line 104, ../sass/_vendor.scss */
+#dialog-box .dialog-content ul {
+  margin: 10px 0 10px 20px;
+  padding: 0;
+  height: 50px;
+}
+
 /* TESTING */
 /* line 17, ../sass/screen.sass */
 .test {
@@ -427,22 +523,29 @@ body {
 /* line 33, ../sass/screen.sass */
 body {
   font-family: "Karla";
-  background: #7EB041;
+  background: crimson;
+}
+
+/* line 38, ../sass/screen.sass */
+h1 {
+  font-family: "Montserrat";
+  font-size: 30px;
 }
 
 /*---------------------------------------------- */
 /* SVG */
 /*------------------------------------------------ */
-/* line 43, ../sass/screen.sass */
+/* line 47, ../sass/screen.sass */
 #sketch {
   width: 300px;
   margin: 0 auto;
+  display: block;
 }
 
 /*---------------------------------------------- */
 /* Guess Input */
 /*------------------------------------------------ */
-/* line 52, ../sass/screen.sass */
+/* line 57, ../sass/screen.sass */
 input {
   display: block;
   margin: 0.3em 0 0 0;
@@ -456,7 +559,7 @@ input {
   text-transform: uppercase;
 }
 
-/* line 64, ../sass/screen.sass */
+/* line 69, ../sass/screen.sass */
 input:focus {
   outline: none;
 }
@@ -465,11 +568,11 @@ input:focus {
 /*---------------------------------------------- */
 /* Navigation */
 /*------------------------------------------------ */
-/* line 93, ../sass/screen.sass */
+/* line 98, ../sass/screen.sass */
 .nav-wrapper {
   display: inline-block;
 }
-/* line 96, ../sass/screen.sass */
+/* line 101, ../sass/screen.sass */
 .nav-wrapper .nav-box {
   width: 16vw;
   height: 12vw;
@@ -480,7 +583,7 @@ input:focus {
   text-align: center;
   display: table;
 }
-/* line 107, ../sass/screen.sass */
+/* line 112, ../sass/screen.sass */
 .nav-wrapper .nav-box a {
   text-decoration: none;
   display: table-cell;

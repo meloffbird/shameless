@@ -18,10 +18,8 @@ $(document).ready(function() {
 		}
 
 
-		$('a.btn-ok, #dialog-overlay, #dialog-box').click(function () {
-			$demo.lazylinepainter(options);
-			$demo.lazylinepainter('paint');
-		});
+		$demo.lazylinepainter(options);
+		$demo.lazylinepainter('paint');
 
     /**
 	* Guess Check
