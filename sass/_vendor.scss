@@ -5,7 +5,7 @@ button, .button, input[type=submit] {
   margin-right: 10px;
   outline: none;
   border: 0;
-  background: #5786c1;
+  background: #0D1317;
   color: white;
   padding: 8px 14px;
   font-weight: bold;
@@ -33,6 +33,10 @@ button, .button, input[type=submit] {
     transform: translate(4px, 4px);
     box-shadow: 1px 0px #3a587f, 0px 1px #4171ae,
               2px 1px #3a587f, 1px 2px #4171ae;
+  }
+
+  &.next, &.back {
+    background: #89D2DC;
   }
 }
 
