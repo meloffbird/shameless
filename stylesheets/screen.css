@@ -439,14 +439,9 @@ button:active, button.active, .button:active, .button.active, input[type=submit]
   box-shadow: 1px 0px #3a587f, 0px 1px #4171ae, 2px 1px #3a587f, 1px 2px #4171ae;
 }
 
-/* line 39, ../sass/_vendor.scss */
-button.start {
-  background: red;
-}
-
 /* Dialog Styels
 /*---------*/
-/* line 47, ../sass/_vendor.scss */
+/* line 42, ../sass/_vendor.scss */
 #dialog-overlay {
   /* set it to fill the whil screen */
   width: 100%;
@@ -466,7 +461,7 @@ button.start {
   display: none;
 }
 
-/* line 70, ../sass/_vendor.scss */
+/* line 65, ../sass/_vendor.scss */
 #dialog-box {
   /* css3 drop shadow */
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
@@ -481,7 +476,7 @@ button.start {
   display: none;
 }
 
-/* line 88, ../sass/_vendor.scss */
+/* line 83, ../sass/_vendor.scss */
 #dialog-box .dialog-content {
   /* style the content */
   text-align: left;
@@ -493,13 +488,13 @@ button.start {
 }
 
 /* extra styling */
-/* line 100, ../sass/_vendor.scss */
+/* line 95, ../sass/_vendor.scss */
 #dialog-box .dialog-content p {
   font-weight: 700;
   margin: 0;
 }
 
-/* line 104, ../sass/_vendor.scss */
+/* line 99, ../sass/_vendor.scss */
 #dialog-box .dialog-content ul {
   margin: 10px 0 10px 20px;
   padding: 0;
@@ -557,37 +552,52 @@ a {
 }
 
 /*---------------------------------------------- */
-/* Guess Input */
+/* Guess Column */
 /*------------------------------------------------ */
 /* line 71, ../sass/screen.sass */
 input {
   display: block;
-  margin: 0.3em 0 0 0;
+  margin: 20px 0;
   padding: 0.5em 0.5em 0.5em 0.7em;
   /* width: calc(100% - 2em) */
   border: none;
-  background: transparent;
+  background: white;
   color: rgba(0, 0, 0, 0.8);
   font-size: 2em;
   letter-spacing: 0.3em;
   text-transform: uppercase;
 }
 
-/* line 83, ../sass/screen.sass */
+/* line 84, ../sass/screen.sass */
 input:focus {
   outline: none;
 }
 
-/* line 87, ../sass/screen.sass */
+/* line 88, ../sass/screen.sass */
 .guess {
   margin-top: 40px;
+}
+
+/* line 92, ../sass/screen.sass */
+p.enter {
+  display: block;
+  float: right;
+  padding: 15px;
+  color: white;
+}
+
+/* Answer */
+/*------------------------------------------------ */
+/* line 104, ../sass/screen.sass */
+#answer {
+  margin-top: 100px;
 }
 
 /* Navigation */
 /*---------------------------------------------- */
 /* Alerts */
 /*------------------------------------------------ */
-/* line 114, ../sass/screen.sass */
+/* line 130, ../sass/screen.sass */
 .alert {
   background: blanchedalmond;
   height: 80px;
@@ -602,11 +612,11 @@ input:focus {
 /*---------------------------------------------- */
 /* Navigation */
 /*------------------------------------------------ */
-/* line 129, ../sass/screen.sass */
+/* line 145, ../sass/screen.sass */
 .nav-wrapper {
   display: inline-block;
 }
-/* line 132, ../sass/screen.sass */
+/* line 148, ../sass/screen.sass */
 .nav-wrapper .nav-box {
   width: 16vw;
   height: 12vw;
@@ -617,19 +627,19 @@ input:focus {
   text-align: center;
   display: table;
 }
-/* line 142, ../sass/screen.sass */
+/* line 158, ../sass/screen.sass */
 .nav-wrapper .nav-box.inactive {
   pointer-events: none;
   cursor: default;
   opacity: 0.5;
 }
-/* line 147, ../sass/screen.sass */
+/* line 163, ../sass/screen.sass */
 .nav-wrapper .nav-box.completed {
   pointer-events: none;
   cursor: default;
   opacity: 1;
 }
-/* line 153, ../sass/screen.sass */
+/* line 169, ../sass/screen.sass */
 .nav-wrapper .nav-box a {
   text-decoration: none;
   display: table-cell;
