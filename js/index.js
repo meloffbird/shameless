@@ -16,7 +16,10 @@ $(document).ready(function() {
 		'delay': 10,
 		'speedMultiplier': 1,
 		'onComplete' : function(){
+			$('button.guess-submit').hide();
+			$('#answer').show();
 			$('#next').show();
+			$('#guess-input').val(answer); // show answer in input
 		}
 	}
 
@@ -53,21 +56,26 @@ $(document).ready(function() {
 	      $('#correct').show();
 	      $('#wrong').hide();
 
-			$demo.lazylinepainter('destroy'); 	// destory lazyline
+	      // destory lazyline
+			$demo.lazylinepainter('destroy');
 
 			options.speedMultiplier = 1;
 			options.delay = 0;
 			options.ease = 'easeInOutQuad';
 
-			$demo.lazylinepainter(options); // restart lazyline
+			// restart lazyline
+			$demo.lazylinepainter(options);
 			$demo.lazylinepainter('paint');
 
+			// hide submit, and reveal answer
 			$('button.guess-submit').hide();
+			$('#answer').show();
 			$('#next').show();
+			$('#guess-input').val(answer);
 
 		} else {
 			$('#wrong').show().fadeOut(1000);
-			$('#guess-input').val(hint);
+			$('#guess-input').val(hint); //reset input value with first letter
 	    }
 
 	  });
