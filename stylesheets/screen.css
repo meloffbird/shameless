@@ -583,7 +583,13 @@ input:focus {
   text-align: center;
   display: table;
 }
-/* line 112, ../sass/screen.sass */
+/* line 111, ../sass/screen.sass */
+.nav-wrapper .nav-box.inactive {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.5;
+}
+/* line 117, ../sass/screen.sass */
 .nav-wrapper .nav-box a {
   text-decoration: none;
   display: table-cell;
@@ -591,6 +597,7 @@ input:focus {
   text-align: center;
 }
 
+/*------------------------------------------------ */
 /*---------------------------------------------- */
 /* Custom, iPhone Retina */
 /*------------------------------------------------ */

@@ -13,15 +13,23 @@ $(document).ready(function() {
 		'strokeWidth':2,
 		'strokeColor': '#fff',
 		'ease': 'easeInOutQuad',
-		'delay': 5,
-		'speedMultiplier': 1
+		'delay': 10,
+		'speedMultiplier': 1,
+		'onComplete' : function(){
+			$('#next').show();
 		}
+	}
 
-
-		$('a.btn-ok, #dialog-overlay, #dialog-box').click(function () {
+		//only fire dialog box on the homepage
+		if ($('body.home').length > 0) {
+			$('a.btn-ok, #dialog-overlay, #dialog-box').click(function () {
+				$demo.lazylinepainter(options);
+				$demo.lazylinepainter('paint');
+			});
+		} else {
 			$demo.lazylinepainter(options);
 			$demo.lazylinepainter('paint');
-		});
+		}
 
     /**
 	* Guess Check
@@ -45,15 +53,17 @@ $(document).ready(function() {
 	      $('#correct').show();
 	      $('#wrong').hide();
 
-			$demo.lazylinepainter('destroy');
+			$demo.lazylinepainter('destroy'); 	// destory lazyline
 
 			options.speedMultiplier = 1;
 			options.delay = 0;
 			options.ease = 'easeInOutQuad';
 
-
-			$demo.lazylinepainter(options);
+			$demo.lazylinepainter(options); // restart lazyline
 			$demo.lazylinepainter('paint');
+
+			$('button.guess-submit').hide();
+			$('#next').show();
 
 		} else {
 			$('#wrong').show().fadeOut(1000);

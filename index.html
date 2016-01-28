@@ -70,7 +70,7 @@
 
 </head>
 
-<body onload="popup('<h1>Welcome to the random exciting pictionary game of Melanie facts. There are five words to the right that describe a fact about me. You have three guesses to get the word before the time runs out. </h1>')">
+<body class="home" onload="popup('<h1>Welcome to the random exciting pictionary game of Melanie facts. There are five words to the right that describe a fact about me. You have three guesses to get the word before the time runs out. </h1>')">
 
 	<!-- dialog popup -->
 	<div id="dialog-overlay"></div>
@@ -89,10 +89,10 @@
 
 				<div class="nav-wrapper">
 					<div class="nav-box"> <a href="index.html"> 1 </a> </div>
-					<div class="nav-box"> <a href="pages/two.html"> 2 </a> </div>
-					<div class="nav-box"> <a href="pages/three.html"> 3 </a> </div>
-					<div class="nav-box"> <a href="pages/four.html"> 4 </a> </div>
-					<div class="nav-box"> <a href="pages/five.html"> 5 </a> </div>
+					<div class="nav-box inactive"> <a href="#"> 2 </a> </div>
+					<div class="nav-box inactive"> <a href="#"> 3 </a> </div>
+					<div class="nav-box inactive"> <a href="#"> 4 </a> </div>
+					<div class="nav-box inactive"> <a href="#"> 5 </a> </div>
 				</div>
 
 			</div>
@@ -117,6 +117,8 @@
 					<input id="guess-input" type="text" name="nightowl" value="n" autocomplete="off"/>
 
 					<button id="guess-submit" class="guess-submit">Submit</button>
+
+					<button id ="next" class="hidden"><a href="pages/two.html"> Next </a> </button>
 
 				</div>
 
