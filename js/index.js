@@ -11,10 +11,10 @@ $(document).ready(function() {
 	var options = {
 		'svgData' : svgData,
 		'strokeWidth':2,
-		'strokeColor': '#b5287b',
+		'strokeColor': '#fff',
 		'ease': 'easeInOutQuad',
 		'delay': 5,
-		'speedMultiplier': 5
+		'speedMultiplier': 1
 		}
 
 	$demo.lazylinepainter(options);
@@ -25,6 +25,11 @@ $(document).ready(function() {
 	*/
 	var answer = document.getElementById('guess-input').name;
 	var hint = document.getElementById('guess-input').value;
+
+
+	 $("#guess-input").on("keydown", function (e) {
+		return e.which !== 32;
+	});
 
 	// check answer and hide boxes
 	function guessAnswer() {

@@ -7,38 +7,48 @@
 @import compass/reset
 @import grid
 @import variables
-@import base
+
+/* css from other places */
+@import vendor
 
 
+/* TESTING */
 
-/* testing */
-p
-	font-size: 20px
-	color: blanchedalmond
-
-
-.color1
-	background: crimson
-
-
-.color2
-	background: indigo
-
-
-.color3
-	background: teal
+.test
+	+test-background(teal)
 
 
 .hidden
 	display: none
 
 
+
+
+
+/*----------------------------------------------*/
+/* Typography
+/*------------------------------------------------*/
+
+
+body
+	font-family: 'Karla'
+	background: #7EB041
+
+
+
+
+/*----------------------------------------------*/
+/* SVG
+/*------------------------------------------------*/
 #sketch
 	width: 300px
 	margin: 0 auto
 
 
-/* Input field */
+
+/*----------------------------------------------*/
+/* Guess Input
+/*------------------------------------------------*/
 input
 	display: block
 	margin: 0.3em 0 0 0
@@ -53,6 +63,10 @@ input
 
 input:focus
 	outline: none
+
+
+
+
 
 
 /* Navigation */
@@ -73,6 +87,9 @@ input:focus
 // 			text-decoration: none
 
 
+/*----------------------------------------------*/
+/* Navigation
+/*------------------------------------------------*/
 .nav-wrapper
 	display: inline-block
 

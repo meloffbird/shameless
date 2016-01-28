@@ -409,47 +409,40 @@ body {
     height: 0;
   }
 }
-/* Typograpy */
-/* line 3, ../sass/_base.sass */
-body {
-  font-family: "Karla";
+/* css from other places */
+/* TESTING */
+/* line 17, ../sass/screen.sass */
+.test {
+  background-color: teal;
 }
 
-/* testing */
-/* line 15, ../sass/screen.sass */
-p {
-  font-size: 20px;
-  color: blanchedalmond;
-}
-
-/* line 20, ../sass/screen.sass */
-.color1 {
-  background: crimson;
-}
-
-/* line 24, ../sass/screen.sass */
-.color2 {
-  background: indigo;
-}
-
-/* line 28, ../sass/screen.sass */
-.color3 {
-  background: teal;
-}
-
-/* line 32, ../sass/screen.sass */
+/* line 21, ../sass/screen.sass */
 .hidden {
   display: none;
 }
 
-/* line 36, ../sass/screen.sass */
+/*---------------------------------------------- */
+/* Typography */
+/*------------------------------------------------ */
+/* line 33, ../sass/screen.sass */
+body {
+  font-family: "Karla";
+  background: #7EB041;
+}
+
+/*---------------------------------------------- */
+/* SVG */
+/*------------------------------------------------ */
+/* line 43, ../sass/screen.sass */
 #sketch {
   width: 300px;
   margin: 0 auto;
 }
 
-/* Input field */
-/* line 42, ../sass/screen.sass */
+/*---------------------------------------------- */
+/* Guess Input */
+/*------------------------------------------------ */
+/* line 52, ../sass/screen.sass */
 input {
   display: block;
   margin: 0.3em 0 0 0;
@@ -463,17 +456,20 @@ input {
   text-transform: uppercase;
 }
 
-/* line 54, ../sass/screen.sass */
+/* line 64, ../sass/screen.sass */
 input:focus {
   outline: none;
 }
 
 /* Navigation */
-/* line 76, ../sass/screen.sass */
+/*---------------------------------------------- */
+/* Navigation */
+/*------------------------------------------------ */
+/* line 93, ../sass/screen.sass */
 .nav-wrapper {
   display: inline-block;
 }
-/* line 79, ../sass/screen.sass */
+/* line 96, ../sass/screen.sass */
 .nav-wrapper .nav-box {
   width: 16vw;
   height: 12vw;
@@ -484,7 +480,7 @@ input:focus {
   text-align: center;
   display: table;
 }
-/* line 90, ../sass/screen.sass */
+/* line 107, ../sass/screen.sass */
 .nav-wrapper .nav-box a {
   text-decoration: none;
   display: table-cell;
