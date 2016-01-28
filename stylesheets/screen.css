@@ -524,18 +524,32 @@ button.start {
 body {
   font-family: "Karla";
   background: crimson;
+  border: 5px solid #fff;
 }
 
-/* line 38, ../sass/screen.sass */
+/* line 39, ../sass/screen.sass */
 h1 {
   font-family: "Montserrat";
   font-size: 30px;
 }
 
+/* line 44, ../sass/screen.sass */
+h2 {
+  font-family: "Montserrat";
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+/* line 52, ../sass/screen.sass */
+a {
+  text-decoration: none;
+  color: white;
+}
+
 /*---------------------------------------------- */
 /* SVG */
 /*------------------------------------------------ */
-/* line 47, ../sass/screen.sass */
+/* line 61, ../sass/screen.sass */
 #sketch {
   width: 300px;
   margin: 0 auto;
@@ -545,7 +559,7 @@ h1 {
 /*---------------------------------------------- */
 /* Guess Input */
 /*------------------------------------------------ */
-/* line 57, ../sass/screen.sass */
+/* line 71, ../sass/screen.sass */
 input {
   display: block;
   margin: 0.3em 0 0 0;
@@ -559,20 +573,40 @@ input {
   text-transform: uppercase;
 }
 
-/* line 69, ../sass/screen.sass */
+/* line 83, ../sass/screen.sass */
 input:focus {
   outline: none;
 }
 
+/* line 87, ../sass/screen.sass */
+.guess {
+  margin-top: 40px;
+}
+
 /* Navigation */
+/*---------------------------------------------- */
+/* Alerts */
+/*------------------------------------------------ */
+/* line 114, ../sass/screen.sass */
+.alert {
+  background: blanchedalmond;
+  height: 80px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 3em;
+  text-align: center;
+  padding: 10px;
+}
+
 /*---------------------------------------------- */
 /* Navigation */
 /*------------------------------------------------ */
-/* line 98, ../sass/screen.sass */
+/* line 129, ../sass/screen.sass */
 .nav-wrapper {
   display: inline-block;
 }
-/* line 101, ../sass/screen.sass */
+/* line 132, ../sass/screen.sass */
 .nav-wrapper .nav-box {
   width: 16vw;
   height: 12vw;
@@ -583,19 +617,19 @@ input:focus {
   text-align: center;
   display: table;
 }
-/* line 111, ../sass/screen.sass */
+/* line 142, ../sass/screen.sass */
 .nav-wrapper .nav-box.inactive {
   pointer-events: none;
   cursor: default;
   opacity: 0.5;
 }
-/* line 116, ../sass/screen.sass */
+/* line 147, ../sass/screen.sass */
 .nav-wrapper .nav-box.completed {
   pointer-events: none;
   cursor: default;
   opacity: 1;
 }
-/* line 122, ../sass/screen.sass */
+/* line 153, ../sass/screen.sass */
 .nav-wrapper .nav-box a {
   text-decoration: none;
   display: table-cell;
@@ -616,25 +650,32 @@ input:focus {
 @media only screen and (min-width: 767px) {
   /* line 21, ../sass/_queries.sass */
   .nav-wrapper .nav-box {
-    width: 15vw;
-    height: 15vw;
+    width: 12vw;
+    height: 12vw;
+    margin-bottom: 10px;
+  }
+
+  /* line 27, ../sass/_queries.sass */
+  #sketch {
+    width: 400px;
+    margin-top: 100px;
   }
 }
 /*---------------------------------------------- */
 /* Medium Devices, Desktops */
 /*------------------------------------------------ */
 @media only screen and (min-width: 992px) {
-  /* line 33, ../sass/_queries.sass */
+  /* line 41, ../sass/_queries.sass */
   .nav-wrapper .nav-box {
-    width: 12vw;
-    height: 12vw;
+    width: 10vw;
+    height: 10vw;
   }
 }
 /*---------------------------------------------- */
 /* Large Devices, Wide Screens */
 /*------------------------------------------------ */
 @media only screen and (min-width: 1200px) {
-  /* line 44, ../sass/_queries.sass */
+  /* line 52, ../sass/_queries.sass */
   .nav-wrapper .nav-box {
     width: 10vw;
     height: 10vw;

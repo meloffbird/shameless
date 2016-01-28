@@ -5,6 +5,7 @@
 	<!--FONTS -->
 	<link href='https://fonts.googleapis.com/css?family=Karla:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Sarina' rel='stylesheet' type='text/css'>
 
 	<!-- CSS STYLES -->
 	<link href="../stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -31,7 +32,7 @@
 
 	<div class="grid grid-pad">
 
-		<div class="col-2-12 test">
+		<div class="col-2-12">
 			<div class="content">
 
 				<div class="nav-wrapper">
@@ -54,18 +55,20 @@
 			</div>
 		</div>
 
-		<div class="col-4-12 test">
+		<div class="col-4-12">
 			<div class="content">
 
 
 				<!--INPUT -->
 				<div class="guess">
 
-					<h2> Guess here </h2>
+					<h2> What's Your Guess? </h2>
 
 					<input id="guess-input" type="text" name="radio" value="r" autocomplete="off"/>
 
 					<button id="guess-submit" class="guess-submit">Submit</button>
+
+					<p> Or press Enter </p>
 
 					<button id ="next" class="hidden"><a href="#"> Next </a> </button>
 
@@ -76,29 +79,27 @@
 					<p> Yes I am a suburban white woman therefore I love NPR radio and Ira Glass and This American Life and a whole host of other beautiful works of auditory art. I follow Serial more religiously than a telenovela and have listened to almost every single Radio Lab & 99% Invisible every created.  </p>
 				</div>
 
-				<!-- ---MESSAGES--- -->
-
-				<div id="messages">
-
-				  <div id="correct" class="hidden">
-				    <h5> CORRECT! </h5>
-				  </div>
-
-				  <div id="wrong" class="hidden">
-				    <h5> NOPE! TRY AGAIN </h5>
-				  </div>
-
-
 
 			</div>
 		</div>
-
-
 
 		<!--JAVASCRIPT-->
 			<script src="../js/index.js"></script>
 
 	</div> <!--end main grid -->
+
+	<!-- ---MESSAGES--- -->
+
+	<div id="messages">
+
+	  <div id="correct" class="alert hidden">
+	    <h5> CORRECT! </h5>
+	  </div>
+
+	  <div id="wrong" class="alert hidden">
+	    <h5> NOPE! TRY AGAIN </h5>
+	  </div>
+
 
 
 </body>
