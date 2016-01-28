@@ -414,6 +414,7 @@ body {
 /*---------*/
 /* line 4, ../sass/_vendor.scss */
 button, .button, input[type=submit] {
+  margin-right: 10px;
   outline: none;
   border: 0;
   background: #5786c1;
@@ -428,12 +429,12 @@ button, .button, input[type=submit] {
   cursor: pointer;
   box-shadow: 1px 0px #3a587f, 0px 1px #4171ae, 2px 1px #3a587f, 1px 2px #4171ae, 3px 2px #3a587f, 2px 3px #4171ae, 4px 3px #3a587f, 3px 4px #4171ae, 5px 4px #3a587f, 4px 5px #4171ae, 6px 5px #3a587f, 5px 6px #4171ae;
 }
-/* line 22, ../sass/_vendor.scss */
+/* line 23, ../sass/_vendor.scss */
 button:hover, button:focus, button.hover, button.focus, .button:hover, .button:focus, .button.hover, .button.focus, input[type=submit]:hover, input[type=submit]:focus, input[type=submit].hover, input[type=submit].focus {
   transform: translate(2px, 2px);
   box-shadow: 1px 0px #3a587f, 0px 1px #4171ae, 2px 1px #3a587f, 1px 2px #4171ae, 3px 2px #3a587f, 2px 3px #4171ae, 4px 3px #3a587f, 3px 4px #4171ae;
 }
-/* line 30, ../sass/_vendor.scss */
+/* line 31, ../sass/_vendor.scss */
 button:active, button.active, .button:active, .button.active, input[type=submit]:active, input[type=submit].active {
   transform: translate(4px, 4px);
   box-shadow: 1px 0px #3a587f, 0px 1px #4171ae, 2px 1px #3a587f, 1px 2px #4171ae;
@@ -441,7 +442,12 @@ button:active, button.active, .button:active, .button.active, input[type=submit]
 
 /* Dialog Styels
 /*---------*/
-/* line 42, ../sass/_vendor.scss */
+/* line 44, ../sass/_vendor.scss */
+#dialog-message {
+  margin-bottom: 20px;
+}
+
+/* line 47, ../sass/_vendor.scss */
 #dialog-overlay {
   /* set it to fill the whil screen */
   width: 100%;
@@ -461,7 +467,7 @@ button:active, button.active, .button:active, .button.active, input[type=submit]
   display: none;
 }
 
-/* line 65, ../sass/_vendor.scss */
+/* line 70, ../sass/_vendor.scss */
 #dialog-box {
   /* css3 drop shadow */
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
@@ -476,7 +482,7 @@ button:active, button.active, .button:active, .button.active, input[type=submit]
   display: none;
 }
 
-/* line 83, ../sass/_vendor.scss */
+/* line 88, ../sass/_vendor.scss */
 #dialog-box .dialog-content {
   /* style the content */
   text-align: left;
@@ -488,13 +494,13 @@ button:active, button.active, .button:active, .button.active, input[type=submit]
 }
 
 /* extra styling */
-/* line 95, ../sass/_vendor.scss */
+/* line 100, ../sass/_vendor.scss */
 #dialog-box .dialog-content p {
   font-weight: 700;
   margin: 0;
 }
 
-/* line 99, ../sass/_vendor.scss */
+/* line 104, ../sass/_vendor.scss */
 #dialog-box .dialog-content ul {
   margin: 10px 0 10px 20px;
   padding: 0;
@@ -525,17 +531,18 @@ body {
 /* line 39, ../sass/screen.sass */
 h1 {
   font-family: "Montserrat";
-  font-size: 30px;
+  font-size: 20px;
+  line-height: 23px;
 }
 
-/* line 44, ../sass/screen.sass */
+/* line 45, ../sass/screen.sass */
 h2 {
   font-family: "Montserrat";
   font-size: 1.5em;
   text-transform: uppercase;
 }
 
-/* line 52, ../sass/screen.sass */
+/* line 53, ../sass/screen.sass */
 a {
   text-decoration: none;
   color: white;
@@ -544,7 +551,7 @@ a {
 /*---------------------------------------------- */
 /* SVG */
 /*------------------------------------------------ */
-/* line 61, ../sass/screen.sass */
+/* line 62, ../sass/screen.sass */
 #sketch {
   width: 300px;
   margin: 0 auto;
@@ -554,7 +561,7 @@ a {
 /*---------------------------------------------- */
 /* Guess Column */
 /*------------------------------------------------ */
-/* line 71, ../sass/screen.sass */
+/* line 72, ../sass/screen.sass */
 input {
   display: block;
   margin: 20px 0;
@@ -568,17 +575,17 @@ input {
   text-transform: uppercase;
 }
 
-/* line 84, ../sass/screen.sass */
+/* line 85, ../sass/screen.sass */
 input:focus {
   outline: none;
 }
 
-/* line 88, ../sass/screen.sass */
+/* line 89, ../sass/screen.sass */
 .guess {
   margin-top: 40px;
 }
 
-/* line 92, ../sass/screen.sass */
+/* line 93, ../sass/screen.sass */
 p.enter {
   display: block;
   float: right;
@@ -588,11 +595,11 @@ p.enter {
 
 /* Answer */
 /*------------------------------------------------ */
-/* line 104, ../sass/screen.sass */
+/* line 105, ../sass/screen.sass */
 #answer {
   margin-top: 100px;
   font-family: "Playfair Display";
-  font-weight: 600;
+  font-weight: 700;
   font-style: italic;
   line-height: 1.5em;
   font-size: 20px;
@@ -602,7 +609,7 @@ p.enter {
 /*---------------------------------------------- */
 /* Alerts */
 /*------------------------------------------------ */
-/* line 135, ../sass/screen.sass */
+/* line 136, ../sass/screen.sass */
 .alert {
   background: blanchedalmond;
   height: 80px;
@@ -617,11 +624,15 @@ p.enter {
 /*---------------------------------------------- */
 /* Navigation */
 /*------------------------------------------------ */
-/* line 150, ../sass/screen.sass */
+/* line 151, ../sass/screen.sass */
 .nav-wrapper {
   display: inline-block;
 }
-/* line 153, ../sass/screen.sass */
+/* line 154, ../sass/screen.sass */
+.nav-wrapper img {
+  width: 100%;
+}
+/* line 157, ../sass/screen.sass */
 .nav-wrapper .nav-box {
   width: 16vw;
   height: 12vw;
@@ -632,19 +643,19 @@ p.enter {
   text-align: center;
   display: table;
 }
-/* line 163, ../sass/screen.sass */
+/* line 167, ../sass/screen.sass */
 .nav-wrapper .nav-box.inactive {
   pointer-events: none;
   cursor: default;
   opacity: 0.5;
 }
-/* line 168, ../sass/screen.sass */
+/* line 172, ../sass/screen.sass */
 .nav-wrapper .nav-box.completed {
   pointer-events: none;
   cursor: default;
   opacity: 1;
 }
-/* line 174, ../sass/screen.sass */
+/* line 178, ../sass/screen.sass */
 .nav-wrapper .nav-box a {
   text-decoration: none;
   display: table-cell;

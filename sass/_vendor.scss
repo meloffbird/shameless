@@ -2,6 +2,7 @@
 /* Button Styles
 /*---------*/
 button, .button, input[type=submit] {
+  margin-right: 10px;
   outline: none;
   border: 0;
   background: #5786c1;
@@ -39,6 +40,10 @@ button, .button, input[type=submit] {
 
 /* Dialog Styels
 /*---------*/
+
+#dialog-message {
+  margin-bottom: 20px;
+}
 #dialog-overlay {
 
   /* set it to fill the whil screen */

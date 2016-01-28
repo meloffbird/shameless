@@ -62,6 +62,7 @@ $(document).ready(function() {
 
 		// hide submit, and reveal answer
 		$('button.guess-submit').hide();
+		$('p.enter').hide();
 		$('#answer').show();
 		$('#next').show();
 		$('#guess-input').val(answer);

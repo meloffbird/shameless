@@ -71,7 +71,7 @@
 
 </head>
 
-<body class="home" onload="popup('<h1>Welcome to the random exciting pictionary game of Melanie facts. There are five words to the right that describe a fact about me. You have three guesses to get the word before the time runs out. </h1>')">
+<body class="home" onload="popup('<h1>Welcome to the random exciting pictionary game of Melanie facts. As each of the pictures is being drawn try to guess the word to reveal a random useless fact about me.</br></br>Think quick though, you only have five guesses to get the word right before the time runs out. </h1>')">
 
 	<!-- dialog popup -->
 	<div id="dialog-overlay"></div>
@@ -117,9 +117,11 @@
 
 					<h2> Guess here </h2>
 
-					<input id="guess-input" type="text" name="nightowl" value="n" autocomplete="off"/>
+					<input id="guess-input" type="text" name="owl" value="o" autocomplete="off"/>
 
 					<button id="guess-submit" class="guess-submit">Submit</button>
+
+					<p class="enter"> Or press Enter </p>
 
 					<button id ="next" class="hidden"><a href="pages/two.html"> Next </a> </button>
 
@@ -127,7 +129,7 @@
 
 
 				<div id="answer" class=" hidden">
-					<p> I am a relentless night <strong> owl </strong>. I try to get up with the early birds but can my body refuses to sleep before 2AM or wake before 9AM </p>
+					<p> I am a relentless night <strong> owl </strong>. I try to get up with the early birds but my body refuses to sleep before 2AM or wake before 9AM </p>
 				</div>
 
 			</div>
