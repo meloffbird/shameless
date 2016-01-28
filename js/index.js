@@ -15,7 +15,7 @@ $(document).ready(function() {
 		'strokeColor': '#fff',
 		'ease': 'easeInOutQuad',
 		'delay': 10,
-		'speedMultiplier': 1,
+		'speedMultiplier': .5,
 		'onComplete' : function(){
 			$('button.guess-submit').hide();
 			$('#answer').show();
