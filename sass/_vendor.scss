@@ -35,8 +35,12 @@ button, .button, input[type=submit] {
               2px 1px #3a587f, 1px 2px #4171ae;
   }
 
-  &.next, &.back {
+  &.back {
     background: #89D2DC;
+  }
+
+  &.next {
+    background: $tealblue
   }
 }
 

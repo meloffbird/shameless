@@ -17,11 +17,15 @@ $(document).ready(function() {
 		'delay': 10,
 		'speedMultiplier': .5,
 		'onComplete' : function(){
-			$('button.guess-submit').hide();
-			$('p.enter').hide();
-			$('#answer').show();
-			$('#next').show();
-			$('#guess-input').val(answer); // show answer in input
+			if ( $('#answer').is(':visible') ) {
+			} else {
+				$('button.guess-submit').hide();
+				$('p.enter').hide();
+				$('#timesup').show().fadeOut(2000);
+				$('#answer').show();
+				$('#next').show();
+				$('#guess-input').val(answer); // show answer in input
+			}
 		}
 	}
 
@@ -47,7 +51,7 @@ $(document).ready(function() {
 
 	//display answer
 	function correctAnswer() {
-		$('#correct').show().fadeOut(3000);
+		$('#correct').show().fadeOut(2000);
 		$('#wrong').hide();
 
 		// destory lazyline
