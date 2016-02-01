@@ -497,14 +497,42 @@ button.next, button.back, .button.next, .button.back, input[type=submit].next, i
   font-size: 11px;
 }
 
+/* line 102, ../sass/_vendor.scss */
+#dialog-box .button {
+  width: 40%;
+  text-align: center;
+}
+/* line 106, ../sass/_vendor.scss */
+#dialog-box .button.start {
+  width: 50%;
+}
+
+/* line 112, ../sass/_vendor.scss */
+#dialog-box .dialog-content h2 {
+  line-height: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+  color: #4b4b4b;
+}
+
+/* line 122, ../sass/_vendor.scss */
+#dialog-box .dialog-content h3 {
+  font-size: 1.2em;
+  line-height: 1.3em;
+  text-align: center;
+}
+
 /* extra styling */
-/* line 104, ../sass/_vendor.scss */
+/* line 130, ../sass/_vendor.scss */
 #dialog-box .dialog-content p {
   font-weight: 700;
   margin: 0;
+  margin-top: 10px;
 }
 
-/* line 108, ../sass/_vendor.scss */
+/* line 134, ../sass/_vendor.scss */
 #dialog-box .dialog-content ul {
   margin: 10px 0 10px 20px;
   padding: 0;
@@ -610,12 +638,17 @@ p.enter {
   font-size: 20px;
   color: white;
 }
+/* line 116, ../sass/screen.sass */
+#answer h2 {
+  border-top: 1px solid white;
+  padding-top: 20px;
+}
 
 /* Navigation */
 /*---------------------------------------------- */
 /* Alerts */
 /*------------------------------------------------ */
-/* line 138, ../sass/screen.sass */
+/* line 143, ../sass/screen.sass */
 .alert {
   height: 80px;
   position: absolute;
@@ -627,35 +660,37 @@ p.enter {
   color: white;
 }
 
-/* line 148, ../sass/screen.sass */
+/* line 153, ../sass/screen.sass */
 #correct {
-  background: green;
+  background: #00CED1;
+  height: 100%;
+  padding-top: 300px;
 }
 
-/* line 151, ../sass/screen.sass */
+/* line 158, ../sass/screen.sass */
 #wrong {
   background: red;
 }
 
-/* line 154, ../sass/screen.sass */
+/* line 161, ../sass/screen.sass */
 #timesup {
   background: #00008B;
   height: 100%;
-  padding-top: 300;
+  padding-top: 300px;
 }
 
 /*---------------------------------------------- */
 /* Navigation */
 /*------------------------------------------------ */
-/* line 164, ../sass/screen.sass */
+/* line 171, ../sass/screen.sass */
 .nav-wrapper {
   display: inline-block;
 }
-/* line 167, ../sass/screen.sass */
+/* line 174, ../sass/screen.sass */
 .nav-wrapper img {
   width: 100%;
 }
-/* line 170, ../sass/screen.sass */
+/* line 177, ../sass/screen.sass */
 .nav-wrapper .nav-box {
   width: 16vw;
   height: 12vw;
@@ -666,19 +701,19 @@ p.enter {
   text-align: center;
   display: table;
 }
-/* line 180, ../sass/screen.sass */
+/* line 187, ../sass/screen.sass */
 .nav-wrapper .nav-box.inactive {
   pointer-events: none;
   cursor: default;
   opacity: 0.5;
 }
-/* line 185, ../sass/screen.sass */
+/* line 192, ../sass/screen.sass */
 .nav-wrapper .nav-box.completed {
   pointer-events: none;
   cursor: default;
   opacity: 1;
 }
-/* line 191, ../sass/screen.sass */
+/* line 198, ../sass/screen.sass */
 .nav-wrapper .nav-box a {
   text-decoration: none;
   display: table-cell;

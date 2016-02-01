@@ -46,7 +46,7 @@ $(document).ready(function() {
 
 
 	//display answer
-	function guessAnswer() {
+	function correctAnswer() {
 		$('#correct').show().fadeOut(3000);
 		$('#wrong').hide();
 
@@ -101,7 +101,7 @@ $(document).ready(function() {
 
 	  	if ( guess == answer) {
 
-	  		guessAnswer();
+	  		correctAnswer();
 
 		} else {
 			$('#wrong').show().fadeOut(1000);
