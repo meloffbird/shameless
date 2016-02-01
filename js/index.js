@@ -18,6 +18,7 @@ $(document).ready(function() {
 		'speedMultiplier': .5,
 		'onComplete' : function(){
 			$('button.guess-submit').hide();
+			$('p.enter').hide();
 			$('#answer').show();
 			$('#next').show();
 			$('#guess-input').val(answer); // show answer in input
@@ -45,7 +46,7 @@ $(document).ready(function() {
 
 
 	//display answer
-	function correctShit() {
+	function guessAnswer() {
 		$('#correct').show().fadeOut(3000);
 		$('#wrong').hide();
 
@@ -75,8 +76,10 @@ $(document).ready(function() {
 
 	  if (count == 5) {
 	  		$('button.guess-submit').hide();
-			$('#answer').show();
+			$('p.enter').hide();
 			$('#next').show();
+			$('#answer').show();
+			$('#timesup').show().fadeOut(2000);
 			$('#guess-input').val(answer); // show answer in input
 	  }
 
@@ -98,7 +101,7 @@ $(document).ready(function() {
 
 	  	if ( guess == answer) {
 
-	  		correctShit();
+	  		guessAnswer();
 
 		} else {
 			$('#wrong').show().fadeOut(1000);

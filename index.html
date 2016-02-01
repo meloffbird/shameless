@@ -1,6 +1,6 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1" >
-	<title>Shameless</title>
+	<title>Mel's Pictionary</title>
 
 	<!--FONTS -->
 	<link href='https://fonts.googleapis.com/css?family=Karla:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
@@ -21,10 +21,10 @@
 	<script src="js/svgdata.js"></script>
 
 
-	<!--FAVICON
-	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-	<link rel="icon" href="images/favicon.png" type="image/x-icon">
-	-->
+	<!--FAVICON -->
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
 
 	<script type="text/javascript">
 
@@ -71,7 +71,7 @@
 
 </head>
 
-<body class="home" onload="popup('<h1>Welcome to the random exciting pictionary game of Melanie facts. As each of the pictures is being drawn try to guess the word to reveal a random useless fact about me.</br></br>Think quick though, you only have five guesses to get the word right before the time runs out. </h1>')">
+<body class="home" onload="popup('<h1>Welcome to the exciting game of Pictionary: Melanie Edition. You have five tries to guess what is being drawn. Guess correctly to reveal a random, useless fact about me! </br></br> *Note: still in testing phase so if you notice any bugs please feel free to shoot me an email and complain. </h1>')">
 
 	<!-- dialog popup -->
 	<div id="dialog-overlay"></div>
@@ -152,6 +152,10 @@
 
 	  <div id="wrong" class="alert hidden">
 	    <h5> NOPE! TRY AGAIN </h5>
+	  </div>
+
+	  <div id="timesup" class="alert hidden">
+	    <h5> TIMES UP!</h5>
 	  </div>
 
 
