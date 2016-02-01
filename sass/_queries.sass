@@ -3,6 +3,17 @@
 /*------------------------------------------------*/
 @media only screen and (min-width : 320px)
 
+	#nomobile
+		display: block
+		position: absolute
+		background: $sexyblue
+		height: 100%
+		width: 100%
+		z-index: 10
+		padding-top: 200px
+		text-align: center
+		color: white
+
 
 
 /*----------------------------------------------*/
@@ -10,12 +21,18 @@
 /*------------------------------------------------*/
 @media only screen and (min-width : 480px)
 
-body
+
 
 /*----------------------------------------------*/
 /* Small Devices, Tablets
 /*------------------------------------------------*/
 @media only screen and (min-width : 767px)
+
+	#nomobile
+		display: none
+
+	#dialog-box, #dialog-overlay
+		display: block
 
 	.nav-wrapper
 		.nav-box

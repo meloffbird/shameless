@@ -440,18 +440,22 @@ button:active, button.active, .button:active, .button.active, input[type=submit]
   box-shadow: 1px 0px #3a587f, 0px 1px #4171ae, 2px 1px #3a587f, 1px 2px #4171ae;
 }
 /* line 38, ../sass/_vendor.scss */
-button.next, button.back, .button.next, .button.back, input[type=submit].next, input[type=submit].back {
+button.back, .button.back, input[type=submit].back {
   background: #89D2DC;
+}
+/* line 42, ../sass/_vendor.scss */
+button.next, .button.next, input[type=submit].next {
+  background: #00CED1;
 }
 
 /* Dialog Styels
 /*---------*/
-/* line 48, ../sass/_vendor.scss */
+/* line 52, ../sass/_vendor.scss */
 #dialog-message {
   margin-bottom: 20px;
 }
 
-/* line 51, ../sass/_vendor.scss */
+/* line 55, ../sass/_vendor.scss */
 #dialog-overlay {
   /* set it to fill the whil screen */
   width: 100%;
@@ -469,9 +473,10 @@ button.next, button.back, .button.next, .button.back, input[type=submit].next, i
   z-index: 3000;
   /* hide it by default */
   display: none;
+  z-index: 5;
 }
 
-/* line 74, ../sass/_vendor.scss */
+/* line 80, ../sass/_vendor.scss */
 #dialog-box {
   /* css3 drop shadow */
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
@@ -484,9 +489,10 @@ button.next, button.back, .button.next, .button.back, input[type=submit].next, i
   z-index: 5000;
   /* hide it by default */
   display: none;
+  z-index: 5;
 }
 
-/* line 92, ../sass/_vendor.scss */
+/* line 100, ../sass/_vendor.scss */
 #dialog-box .dialog-content {
   /* style the content */
   text-align: left;
@@ -497,17 +503,17 @@ button.next, button.back, .button.next, .button.back, input[type=submit].next, i
   font-size: 11px;
 }
 
-/* line 102, ../sass/_vendor.scss */
+/* line 110, ../sass/_vendor.scss */
 #dialog-box .button {
   width: 40%;
   text-align: center;
 }
-/* line 106, ../sass/_vendor.scss */
+/* line 114, ../sass/_vendor.scss */
 #dialog-box .button.start {
   width: 50%;
 }
 
-/* line 112, ../sass/_vendor.scss */
+/* line 120, ../sass/_vendor.scss */
 #dialog-box .dialog-content h2 {
   line-height: 20px;
   text-align: center;
@@ -517,7 +523,7 @@ button.next, button.back, .button.next, .button.back, input[type=submit].next, i
   color: #4b4b4b;
 }
 
-/* line 122, ../sass/_vendor.scss */
+/* line 130, ../sass/_vendor.scss */
 #dialog-box .dialog-content h3 {
   font-size: 1.2em;
   line-height: 1.3em;
@@ -525,14 +531,14 @@ button.next, button.back, .button.next, .button.back, input[type=submit].next, i
 }
 
 /* extra styling */
-/* line 130, ../sass/_vendor.scss */
+/* line 138, ../sass/_vendor.scss */
 #dialog-box .dialog-content p {
   font-weight: 700;
   margin: 0;
   margin-top: 10px;
 }
 
-/* line 134, ../sass/_vendor.scss */
+/* line 142, ../sass/_vendor.scss */
 #dialog-box .dialog-content ul {
   margin: 10px 0 10px 20px;
   padding: 0;
@@ -560,22 +566,32 @@ body {
   border: 5px solid #fff;
 }
 
-/* line 39, ../sass/screen.sass */
-h1 {
+/* line 38, ../sass/screen.sass */
+h1, h2, h4 {
   font-family: "Montserrat";
+}
+
+/* line 42, ../sass/screen.sass */
+h1 {
   font-size: 20px;
   line-height: 23px;
 }
 
-/* line 45, ../sass/screen.sass */
+/* line 47, ../sass/screen.sass */
 h2 {
-  font-family: "Montserrat";
   font-size: 1.5em;
   text-transform: uppercase;
   color: #fff;
 }
 
-/* line 54, ../sass/screen.sass */
+/* line 52, ../sass/screen.sass */
+h4 {
+  font-size: 16px;
+  line-height: 18px;
+  margin-bottom: 10px;
+}
+
+/* line 59, ../sass/screen.sass */
 a {
   text-decoration: none;
   color: white;
@@ -584,7 +600,7 @@ a {
 /*---------------------------------------------- */
 /* SVG */
 /*------------------------------------------------ */
-/* line 63, ../sass/screen.sass */
+/* line 68, ../sass/screen.sass */
 #sketch {
   width: 300px;
   margin: 0 auto;
@@ -594,7 +610,7 @@ a {
 /*---------------------------------------------- */
 /* Guess Column */
 /*------------------------------------------------ */
-/* line 73, ../sass/screen.sass */
+/* line 78, ../sass/screen.sass */
 input {
   display: block;
   margin: 20px 0;
@@ -608,17 +624,17 @@ input {
   text-transform: uppercase;
 }
 
-/* line 86, ../sass/screen.sass */
+/* line 91, ../sass/screen.sass */
 input:focus {
   outline: none;
 }
 
-/* line 90, ../sass/screen.sass */
+/* line 95, ../sass/screen.sass */
 .guess {
   margin-top: 40px;
 }
 
-/* line 94, ../sass/screen.sass */
+/* line 99, ../sass/screen.sass */
 p.enter {
   display: block;
   float: right;
@@ -628,7 +644,7 @@ p.enter {
 
 /* Answer */
 /*------------------------------------------------ */
-/* line 106, ../sass/screen.sass */
+/* line 111, ../sass/screen.sass */
 #answer {
   margin-top: 100px;
   font-family: "Playfair Display";
@@ -638,17 +654,18 @@ p.enter {
   font-size: 20px;
   color: white;
 }
-/* line 116, ../sass/screen.sass */
+/* line 121, ../sass/screen.sass */
 #answer h2 {
   border-top: 1px solid white;
   padding-top: 20px;
+  margin-bottom: 10px;
 }
 
 /* Navigation */
 /*---------------------------------------------- */
 /* Alerts */
 /*------------------------------------------------ */
-/* line 143, ../sass/screen.sass */
+/* line 149, ../sass/screen.sass */
 .alert {
   height: 80px;
   position: absolute;
@@ -660,19 +677,19 @@ p.enter {
   color: white;
 }
 
-/* line 153, ../sass/screen.sass */
+/* line 159, ../sass/screen.sass */
 #correct {
   background: #00CED1;
   height: 100%;
   padding-top: 300px;
 }
 
-/* line 158, ../sass/screen.sass */
+/* line 164, ../sass/screen.sass */
 #wrong {
   background: red;
 }
 
-/* line 161, ../sass/screen.sass */
+/* line 167, ../sass/screen.sass */
 #timesup {
   background: #00008B;
   height: 100%;
@@ -682,15 +699,15 @@ p.enter {
 /*---------------------------------------------- */
 /* Navigation */
 /*------------------------------------------------ */
-/* line 171, ../sass/screen.sass */
+/* line 177, ../sass/screen.sass */
 .nav-wrapper {
   display: inline-block;
 }
-/* line 174, ../sass/screen.sass */
+/* line 180, ../sass/screen.sass */
 .nav-wrapper img {
   width: 100%;
 }
-/* line 177, ../sass/screen.sass */
+/* line 183, ../sass/screen.sass */
 .nav-wrapper .nav-box {
   width: 16vw;
   height: 12vw;
@@ -701,19 +718,19 @@ p.enter {
   text-align: center;
   display: table;
 }
-/* line 187, ../sass/screen.sass */
+/* line 193, ../sass/screen.sass */
 .nav-wrapper .nav-box.inactive {
   pointer-events: none;
   cursor: default;
   opacity: 0.5;
 }
-/* line 192, ../sass/screen.sass */
+/* line 198, ../sass/screen.sass */
 .nav-wrapper .nav-box.completed {
   pointer-events: none;
   cursor: default;
   opacity: 1;
 }
-/* line 198, ../sass/screen.sass */
+/* line 204, ../sass/screen.sass */
 .nav-wrapper .nav-box a {
   text-decoration: none;
   display: table-cell;
@@ -725,6 +742,20 @@ p.enter {
 /*---------------------------------------------- */
 /* Custom, iPhone Retina */
 /*------------------------------------------------ */
+@media only screen and (min-width: 320px) {
+  /* line 6, ../sass/_queries.sass */
+  #nomobile {
+    display: block;
+    position: absolute;
+    background: #001dfa;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    padding-top: 200px;
+    text-align: center;
+    color: white;
+  }
+}
 /*---------------------------------------------- */
 /* Extra Small Devices, Phones */
 /*------------------------------------------------ */
@@ -732,14 +763,24 @@ p.enter {
 /* Small Devices, Tablets */
 /*------------------------------------------------ */
 @media only screen and (min-width: 767px) {
-  /* line 21, ../sass/_queries.sass */
+  /* line 31, ../sass/_queries.sass */
+  #nomobile {
+    display: none;
+  }
+
+  /* line 34, ../sass/_queries.sass */
+  #dialog-box, #dialog-overlay {
+    display: block;
+  }
+
+  /* line 38, ../sass/_queries.sass */
   .nav-wrapper .nav-box {
     width: 12vw;
     height: 12vw;
     margin-bottom: 10px;
   }
 
-  /* line 27, ../sass/_queries.sass */
+  /* line 44, ../sass/_queries.sass */
   #sketch {
     width: 400px;
     margin-top: 100px;
@@ -749,7 +790,7 @@ p.enter {
 /* Medium Devices, Desktops */
 /*------------------------------------------------ */
 @media only screen and (min-width: 992px) {
-  /* line 41, ../sass/_queries.sass */
+  /* line 58, ../sass/_queries.sass */
   .nav-wrapper .nav-box {
     width: 10vw;
     height: 10vw;
@@ -759,7 +800,7 @@ p.enter {
 /* Large Devices, Wide Screens */
 /*------------------------------------------------ */
 @media only screen and (min-width: 1200px) {
-  /* line 52, ../sass/_queries.sass */
+  /* line 69, ../sass/_queries.sass */
   .nav-wrapper .nav-box {
     width: 10vw;
     height: 10vw;

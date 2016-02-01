@@ -72,6 +72,8 @@ button, .button, input[type=submit] {
 
   /* hide it by default */
   display:none;
+
+  z-index: 5;
 }
 
 
@@ -91,6 +93,8 @@ button, .button, input[type=submit] {
 
   /* hide it by default */
   display:none;
+
+  z-index: 5;
 }
 
 #dialog-box .dialog-content {
